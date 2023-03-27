@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="description" content="This is my practice page">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/icons/note/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/icons/note/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/icons/note/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/icons/note/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/icons/note/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/icons/note/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/icons/note/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/icons/note/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/note/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/icons/note/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/note/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/icons/note/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/note/favicon-16x16.png">
+    <link rel="manifest" href="/icons/note/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/icons/note/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+<title>0327 串接網頁媒體工具</title>
+
+<style type="text/css">
+
+    header{background-image:url(background/html.png);
+          background-repeat:no-repeat;} 
+
+    main {float:left;
+         width:60%;
+        height:850px;}  
+
+   th, td {border: 1px solid #000;}  
+
+   table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+</style>
+
+
+</head>
+
+<body>
+<header>
+   <p id="back to top" class="backtotop"></p>
+   <h1><p style="margin-left:1cm;">0327 串接網頁媒體工具 </h1>
+</header>
+
+<main>
+
+   <b> <h2>筆記:</h2> </b>
+
+   <h3> <div>元素element</div></h3>
+
+   <div> <b>button按鈕</b></div>
+   
+   <b>請輸入正確答案?</b> 
+   <form action="">
+     <input type="text" name="ABCDEFG">
+     <button id="N">提交答案</button>
+     <button type="submit">重新填寫</button> 
+   </form>
+
+   <script>
+      let btn = document.querySelector('#N')
+      btn.addEventListener('click', (e) => {
+          alert('Bingo!')
+      })
+   </script>
+   
+   <div> <b>ul、li列舉</b></div>
+   <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+  </ul>
+  <br>
+
+  <div> <b>table建立表格</b></div>
+  <div>thead表頭</div>
+  <div>tbody表身</div>
+  <div>tr列</div>
+  <div>td欄</div>
+  <div>th標題儲存格</div>
+ 
+  <table border="1">
+   <thead>
+       <tr>
+           <th>星期一</th>
+           <th>星期二</th>
+           <th>星期三</th>
+       </tr>
+   </thead>
+   <tbody>
+       <tr>
+           <td>國文</td>
+           <td>英文</td>
+           <td>化學</td>
+       </tr>
+       <tr>
+         <td>地理</td>
+         <td>體育</td>
+         <td>社會</td>
+       </tr>
+   </tbody>
+</table>
+<img src="S__187179023.jpg" alt="0327-1" title="0327-1" width=70% height=50%/>
+<br>
+
+<div> <b>iframe嵌入頁面</b></div>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3640.6530891986185!2d120.68338335081619!3d24.14881827927871!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d691d272657%3A0x2ed7da18282bc17c!2z6LWr57a16Zu76IWm6Kit6KiI5Z-56KiT5a246ZmiLeWPsOS4reWtuOmZog!5e0!3m2!1szh-TW!2stw!4v1679922847196!5m2!1szh-TW!2stw" 
+width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aw8xJtU9nq8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<br>
+
+<div> <b>form表單</b></div>
+<div>表單資料回傳:get少量不要求安全的資料；post大量安全的資料</div>
+<form method="get" action="url"> </form>
+<br>
+
+<div> <b>input輸入</b></div>
+<div>請輸入帳號密碼</div>
+<input type="text" name="account">
+<input type="password" name="pwd">
+<div>請上傳身份證、健保卡</div>
+<input type="file" name="my-pic">
+<div>單選題</div>
+<input type="radio" name="gender" value="male" /> 男
+<input type="radio" name="gender" value="female" /> 女
+<div>多選題+陣列[]</div>
+<input type="checkbox" name="music[]" value="a1" /> A1
+<input type="checkbox" name="music[]" value="a2" /> A2
+<input type="checkbox" name="music[]" value="a3" /> A3
+
+<br>
+
+<div> <b>select下拉式選單</b></div>
+<div>單選答案</div>
+<select name="county">
+   <option value="台北">台北</option>
+   <option value="台中">台中</option>
+   <option value="高雄">高雄</option>
+</select>
+
+<div>多選答案</div>
+<select name="county[]" multiple>
+   <option value="台北">台北</option>
+   <option value="台中">台中</option>
+   <option value="高雄">高雄</option>
+</select>
+<br>
+
+<div> <b>textarea多行輸入</b></div>
+<textarea name="remark" cols="30" rows="10"></textarea>
+<br>
+
+<div> <b>label標籤 </b></div>
+<div>
+   <label for="fullname">請輸入您的全名</label>
+   <input type="text" name="fullname" id="fullname">
+</div>
+<img src="S__187187204.jpg" alt="0327-1" title="0327-1" width=70% height=50%/>
+<img src="S__187187203.jpg" alt="0327-1" title="0327-1" width=70% height=50%/>
+
+</main>
+</body>
+</html>
+
