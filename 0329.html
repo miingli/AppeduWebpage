@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="description" content="This is my practice page">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/icons/note/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/icons/note/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/icons/note/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/icons/note/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/icons/note/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/icons/note/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/icons/note/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/icons/note/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/note/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/icons/note/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/note/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/icons/note/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/note/favicon-16x16.png">
+    <link rel="manifest" href="/icons/note/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/icons/note/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="css/0329.css">
+
+<title>0329 網頁介面設計觀念與技巧/搜尋引擎優化概念</title>
+
+</head>
+
+<body>
+<header>
+   <h1><p style="margin-left:1cm;">0329 網頁介面設計觀念與技巧/搜尋引擎優化概念 </h1>
+</header>
+
+<main>
+
+   <b> <h2>筆記:</h2> </b>
+
+   <h3> CSS </h3>
+
+
+   <div> <b>選擇器特性</b> </div>
+
+   <b>範圍 scope</b>
+   <div>A</div>
+   <span>B</span>
+   <span> <div>C</div> </span>
+   <img src="S__187457538.jpg" alt="0329-1" title="0329-1" width=30% height=50%/> <br>
+ 
+   <b>繼承 inherit</b> 
+   <div>A</div>
+   <span>B</span>
+   <span> <div>C</div> </span>
+
+   <b>複寫 overwrite</b> 
+   <div>A</div>
+   <div style="color: blueviolet">B</div>
+
+   <b>由上往下複寫</b>
+   <div>A</div>
+
+   <b>權重 priority</b>
+   <div>A</div>
+   <span> <div>C</div> </span>
+
+   <b>id選擇器</b>
+   <div id="id">ID對應CSS「#」，數字不能設為開頭</div>
+
+   <b>class選擇器</b>
+   <div class="class">class對應CSS「.」，數字不能設為開頭</div>
+
+   <b>內容 content</b>
+   <div class="square">正方形</div> <br>
+   <img src="CC312.jpg" alt="0329-2" title="0329-2" width=60% height=50%/> <br>
+ 
+
+   <from>
+   <h2> <b>表單設計</b> </h2>
+   
+    <form id="contact-form" method="post">
+            <div> <label for="fullname">全名</label> </div>
+
+            <div>
+                <input type="text" name="fullname" id="fullname" class="input-text">
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="gender" class="label">性別</label>
+            </div>
+            <div>
+                <input type="radio" class="radio" name="gender" id="gender-m">
+                <label for="gender-m">男</label>
+                <input type="radio" class="radio" name="gender" id="gender-f">
+                <label for="gender-f">女</label>
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="">喜好音樂</label>
+            </div>
+            <div>
+                <input type="checkbox" name="music[]" id="music-pop">
+                <label for="music-pop">Pop</label>
+                <input type="checkbox" name="music[]" id="music-jazz">
+                <label for="music-jazz">Jazz</label>
+                <input type="checkbox" name="music[]" id="music-rock">
+                <label for="music-rock">Rock</label>
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="city">縣市</label>
+            </div>
+            <div>
+                <select name="city" id="city">
+                    <option value="">選擇縣市</option>
+                    <option>台北</option>
+                    <option>台中</option>
+                    <option>高雄</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <div>
+                <label for="remark">其他建議</label>
+            </div>
+            <div>
+                <textarea name="remark" id="remark"></textarea>
+            </div>
+        </div>
+
+        <div>
+        <div class="fn">
+            <button>提交</button>
+        </div>
+    </form>
+
+</main>
+</body>
+</html>
+
