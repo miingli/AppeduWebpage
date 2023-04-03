@@ -1,0 +1,126 @@
+header {background-image:url(/background/html.png);
+    background-repeat:no-repeat;} 
+*,
+*::before,
+*::after {
+padding: 0;
+margin: 0;
+ box-sizing: border-box;
+    }
+
+div {
+        background: rgb(240, 201, 201);
+        color: rgb(8, 8, 8);
+    }
+
+    .inline {
+        display: inline;
+    }
+
+    span {
+        background: blue;
+        color: #fff;
+        width: 300px;
+        height: 300px;
+    }
+
+    .over {
+        width: 100px;
+        height: 120px;
+        background: #dedede;
+        overflow-y: auto;
+        overflow-y: hidden;
+    }
+    .item {
+        background: #dedede;
+        padding: 10px;
+    }
+
+
+    .pos-relative {
+        position:relative;
+    }
+
+    .pos-absolute {
+        position:absolute;
+        background:rgb(231, 159, 159);
+    }
+
+    .pos-fixed {
+        position:fixed;
+        background:yellow;
+    }
+    .popup {
+        border: 1px solid #000;
+        width: 300px;
+        height: 300px;
+        margin:auto;
+        position: relative;
+    }
+
+    .popup-button {
+        position: absolute;
+        bottom: 0;}
+
+.face {
+            width: 400px;
+            height:400px;
+            background-color: #f5ab23;
+            margin: auto;
+            margin-top: 20px;
+            position: relative;
+        }
+        
+.eye {
+            width: 100px;
+            height: 100px;
+            background-color: #b3b3b3;
+            background-color: #ffffff;
+            border-radius: 60px;
+            position: absolute;
+        }
+        
+.left {
+        top: 60px;
+        left: 40px;
+        }
+        
+.right {
+        top: 60px;
+        right: 60px;
+        }
+    
+.dot {
+    width: 50px;
+    height: 50px;
+    background-color: #dd2929;
+    background-color: #030303;
+    border-radius: 50px;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
+.mouth {
+    width: 150px;
+    height: 60px;
+    background: yellow;
+    background: rgb(245, 245, 245);
+    position: absolute;
+    bottom: 0.5px;
+    left: 220px;
+    margin-left: -100px;
+    overflow: hidden;
+}
+
+.thought {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    margin-left: -25px;
+    border-radius: 50px;
+
+}
