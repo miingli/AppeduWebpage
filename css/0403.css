@@ -62,6 +62,8 @@ div {
         position: absolute;
         bottom: 0;}
 
+.draw{ text-align: center; }
+
 .face {
             width: 400px;
             height:400px;
@@ -82,12 +84,12 @@ div {
         
 .left {
         top: 60px;
-        left: 40px;
+        left: 55px;
         }
         
 .right {
         top: 60px;
-        right: 60px;
+        right: 55px;
         }
     
 .dot {
@@ -107,7 +109,7 @@ div {
     background: yellow;
     background: rgb(245, 245, 245);
     position: absolute;
-    bottom: 0.5px;
+    bottom: 0.1px;
     left: 220px;
     margin-left: -100px;
     overflow: hidden;

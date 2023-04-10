@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="description" content="This is my practice page">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/icons/note/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/icons/note/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/icons/note/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/icons/note/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/icons/note/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/icons/note/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/icons/note/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/icons/note/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/note/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/icons/note/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/note/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/icons/note/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/note/favicon-16x16.png">
+    <link rel="manifest" href="/icons/note/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/icons/note/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="css/0410.css">
+
+<title>0410 CSS排版技巧</title>
+
+</head>
+
+<body>
+<header>
+   <h1><p style="margin-left:1cm;">04 CSS排版技巧 </h1>
+</header>
+
+<main>
+
+   <b> <h2>筆記:</h2> </b>
+   
+   <h3> CSS </h3>
+
+   <h4>html註解ctrl+/ ; css註解/*...*/</h4>
+
+   <h4 class="draw"><b>畫臉</b></h4>
+
+    <div class="face">
+        <div class="eye left">
+            <div class="dot"></div>
+        </div>
+        <div class="eye right">
+            <div class="dot"></div>
+        </div>
+        <div class="mouth">
+            <div class="thought"></div>
+        </div>
+    </div>
+
+    <div class="ad-banner"> 
+        <div class="ad-content">
+            <div class="ad-close"> 
+                <a href="#">&times;</a> </div> <!-- &times; 符號xx -->
+
+            <h1>AD Banner</h1>
+            <div>Something....</div>
+       </div> 
+   </div>
+
+    <h4>單位</h4>
+    <b>繼承倍數 em</b>
+    <div class="em">
+        <span>L1</span>
+        <div class="em">
+            <span>L2</span>
+            <div class="em">
+                <span>L3</span>
+            </div>
+        </div>
+    </div>
+
+    <h4>根倍數 rem</h4>
+    <div class="rem">
+        <span>L1</span>
+        <div class="rem">
+            <span>L2</span>
+            <div class="rem">
+                <span>L3</span>
+            </div>
+        </div>
+    </div>
+
+    <h4>方向 flex-direction</h4>
+    <h4>主軸對齊 justify-content</h4>
+
+    <div class="flex dir-cr">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+    </div>
+
+    <div class="flex">
+        <div class="flex-item">3</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">1</div>
+    </div>
+
+    <h4>換行行為 內容超出行為 flex-wrap</h4>
+    <div class="flex flex-wrap-r">
+      <div class="flex-item large">3</div>
+      <div class="flex-item large">2</div>
+      <div class="flex-item large">1</div>
+  </div>
+
+  <div class="flex jc-c">
+     <div class="flex-item">1</div>
+     <div class="flex-item">2</div>
+     <div class="flex-item">3</div>
+  </div>
+     <div class="flex jc-sa">
+     <div class="flex-item">1</div>
+     <div class="flex-item">2</div>
+     <div class="flex-item">3</div>
+  </div>
+  <div class="flex jc-sb">
+     <div class="flex-item">1</div>
+     <div class="flex-item">2</div>
+     <div class="flex-item">3</div>
+  </div>
+  <div class="flex jc-se">
+     <div class="flex-item">1</div>
+     <div class="flex-item">2</div>
+     <div class="flex-item">3</div>
+  </div>
+
+  <h4>副軸內容對齊 align-items</h4>
+<div class="flex ai-c" style="line-height: 30px;">
+   我們一般認為，抓住了問題的關鍵，其他一切則會迎刃而解。
+   老舊的想法已經過時了。這必定是個前衛大膽的想法。
+   對於一般人來說，align-items究竟象徵著什麼呢？
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</main>
+</body>
+</html>
+
