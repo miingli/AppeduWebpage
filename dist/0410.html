@@ -31,18 +31,18 @@
 
 <body>
 <header>
-   <h1><p style="margin-left:1cm;">04 CSS排版技巧 </h1>
+   <h1><p style="margin-left:1cm;">0410 CSS排版技巧 </h1>
 </header>
 
 <main>
 
    <b> <h2>筆記:</h2> </b>
-   
-   <h3> CSS </h3>
+
+   <h3> <a href="/layout.html" target="_blank">網頁初排版webpage layout</a> </h3>
 
    <h4>html註解ctrl+/ ; css註解/*...*/</h4>
 
-   <h4 class="draw"><b>畫臉</b></h4>
+   <h3 class="draw"><b>畫臉</b></h3>
 
     <div class="face">
         <div class="eye left">
@@ -55,18 +55,22 @@
             <div class="thought"></div>
         </div>
     </div>
-
+    
+    <label for="ad-switch">開啟廣告</label>
+    <input type="checkbox" id="ad-switch">
     <div class="ad-banner"> 
         <div class="ad-content">
             <div class="ad-close"> 
-                <a href="#">&times;</a> </div> <!-- &times; 符號xx -->
-
+                <label for="ad-switch"> &times; </label> 
+                </div>
+                <!-- &times; 符號xx -->
+               
             <h1>AD Banner</h1>
             <div>Something....</div>
        </div> 
    </div>
 
-    <h4>單位</h4>
+    <h3>單位</h3>
     <b>繼承倍數 em</b>
     <div class="em">
         <span>L1</span>
@@ -133,7 +137,7 @@
   </div>
 
   <h4>副軸內容對齊 align-items</h4>
-<div class="flex ai-c" style="line-height: 30px;">
+  <div class="flex ai-c" style="line-height: 30px;">
    我們一般認為，抓住了問題的關鍵，其他一切則會迎刃而解。
    老舊的想法已經過時了。這必定是個前衛大膽的想法。
    對於一般人來說，align-items究竟象徵著什麼呢？

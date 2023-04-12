@@ -97,7 +97,15 @@ header {background-image:url(/background/html.png);
         top: -10px;
         display: flex;
         justify-content: center;
-        /* cursor: pointer; 手指*/
+        cursor: pointer; /*手指*/
+    }
+
+    label {
+        cursor: pointer;
+    }
+    
+    #ad-switch:checked + .ad-banner {
+        display: none;
     }
     
     /* 消除 a 預設樣式 */
