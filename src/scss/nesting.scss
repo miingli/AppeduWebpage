@@ -1,0 +1,11 @@
+#header {
+    background: yellow;
+
+    &:hover {
+        background: blue;
+    }
+
+    .title {
+        color: red;
+    }
+}

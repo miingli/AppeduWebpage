@@ -1,0 +1,17 @@
+.s1 {
+  width: 200px;
+  height: 200px;
+  background: red;
+}
+
+.s2 {
+  width: 200px;
+  height: 200px;
+  background: yellow;
+}
+
+.s3 {
+  font-size: 200px;
+  font-size: 100px;
+  margin: 10px;
+}/*# sourceMappingURL=scss demo.css.map */
