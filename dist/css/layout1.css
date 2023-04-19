@@ -1,76 +1,100 @@
-*,*::after,*::before {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 body {
-    background: #000;
+  background: #000;
 }
 
 .container {
-    max-width: 1000px;
-    max-width: 700px;
-    height: 100%;
-    position: relative;
-    margin: auto;
+  max-width: 700px;
+  height: 100%;
+  position: relative;
+  margin: auto;
 }
 
 .header {
-    background: red;
-    background: rgb(255, 255, 255);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    height: 100px;
-    border-bottom-right-radius: 8px;
-    border-bottom-left-radius: 8px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
 }
-
-/* .header2 {
-    background: red;
-    margin-top: 20px; */
-    .menu ul {
-        list-style-type: none;
-        display: flex;
+.header .header-content {
+  background: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  height: 100px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
-
-.menu ul li {
-    text-align: center;
-    margin-right: 15px;
-    font-family: 'Noto Sans TC', sans-serif;
-    font-size: 18px;
+.header .header-content .menu ul {
+  list-style-type: none;
+  display: flex;
 }
-
-.menu ul li:last-child {
-    margin-right: 0;
+.header .header-content .menu ul li {
+  text-align: center;
+  margin-right: 15px;
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 18px;
 }
-
-.menu ul li .en {
-    text-transform: uppercase; 
-    font-size: 14px;
-    font-weight: 800;
-    font-family: 'Courier New', Courier, monospace;
+.header .header-content .menu ul li:hover {
+  color: rgb(47, 47, 248);
+}
+.header .header-content .menu ul li:last-child {
+  margin-right: 0;
+}
+.header .header-content .menu ul li .en {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 800;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .footer {
-    background: #fff;
-    height: 100px;
+  background: #fff;
+  height: 100px;
+}
+.footer .footer-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
 }
 
-.footer-content {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 100%;
+.join-form {
+  height: 100vh;
+  background-color: rgb(179, 240, 240);
+}
+.join-form .join-form-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.join-form .join-form-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: rgb(255, 210, 210);
+  height: 300px;
+}
+.join-form > div {
+  width: 50%;
 }
 
 .wrap {
-    height: 100vh;
-}
+  height: 100vh;
+  background: rgb(224, 224, 178);
+}/*# sourceMappingURL=layout1.css.map */

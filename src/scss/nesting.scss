@@ -1,11 +1,19 @@
+@import 'reset';
+
 #header {
     background: yellow;
 
+    // 自己
     &:hover {
         background: blue;
     }
 
+    // 後代
     .title {
         color: red;
+
+        .content {
+            color: yellow;
+        }
     }
 }
