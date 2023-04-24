@@ -11,8 +11,10 @@ a {
   text-decoration: none;
 }
 
-body {
+body,
+html {
   background: #000;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -26,7 +28,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 99;
   width: 100%;
 }
 .header .header-content {
@@ -76,6 +78,18 @@ body {
 .join-form {
   height: 100vh;
   background-color: rgb(179, 240, 240);
+  background-image: url(/banner.jpeg);
+  background-size: cover;
+  position: relative;
+}
+.join-form::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.356);
 }
 .join-form .join-form-wrap {
   display: flex;
@@ -83,18 +97,143 @@ body {
   align-items: center;
   height: 100%;
 }
-.join-form .join-form-content {
+.join-form .join-form-wrap .join-form-content {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background: rgb(255, 210, 210);
-  height: 300px;
+  background-color: rgb(5, 47, 138);
+  color: #fff;
+  height: 350px;
 }
-.join-form > div {
+.join-form .join-form-wrap .join-form-content > div {
   width: 50%;
+  padding: 30px;
+}
+.join-form .join-form-wrap .join-form-content .join-form-left-side {
+  position: relative;
+}
+.join-form .join-form-wrap .join-form-content .join-form-left-side::before {
+  content: "";
+  position: absolute;
+  border-left: 3px dashed #fff;
+  height: calc(100% - 60px);
+  right: 0;
+  top: 30px;
+}
+.join-form .join-form-wrap .join-form-content .text-content {
+  line-height: 30px;
+  text-align: justify;
+}
+.join-form .join-form-wrap .join-form-content .form-control {
+  margin-bottom: 15px;
+}
+.join-form .join-form-wrap .join-form-content .form-control input {
+  width: 100%;
+  height: 40px;
+  border: 0;
+  outline: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+  border-radius: 4px;
+}
+.join-form .join-form-wrap .join-form-content .join-form-submit {
+  text-align: right;
 }
 
-.wrap {
-  height: 100vh;
-  background: rgb(224, 224, 178);
+.button {
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.button.primary {
+  background: #1042cc;
+  color: #fff;
+}
+.button.primary:hover {
+  background: #285ef3;
+}
+
+.slogan {
+  font-size: 30px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+.slogan::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 140px);
+  width: 0;
+  height: 3px;
+  border-left: solid 100px #1072c2;
+  border-right: solid 180px #fff;
+}
+
+.courses {
+  min-height: 100vh;
+  background-color: rgb(65, 65, 65);
+  background-image: url(/process.jpeg);
+  background-size: cover;
+  position: relative;
+  color: #fff;
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.courses::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.356);
+}
+
+.flow {
+  position: relative;
+  z-index: 2;
+}
+.flow .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.flow .item::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 0;
+  top: 0;
+  border-left: 4px dashed #fff;
+}
+.flow .item .circle {
+  width: 30px;
+  height: 30px;
+  background: red;
+  border-radius: 30px;
+  position: relative;
+  z-index: 2;
+}
+.flow .item .text {
+  position: absolute;
+  left: calc(50% + 50px);
+  background: rgb(0, 60, 255);
+  padding: 20px;
+  border-radius: 6px;
+}
+.flow .item .text h4 {
+  margin-bottom: 15px;
+}
+.flow .item:nth-child(even) .text {
+  left: unset;
+  right: calc(50% + 50px);
+  text-align: right;
 }/*# sourceMappingURL=layout1.css.map */
