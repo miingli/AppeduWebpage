@@ -1,0 +1,139 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* // font-size:100px; */
+}
+
+/* 設定頁面背景色 */
+body {
+    background-color: #000000;
+    color: #ffffff;
+
+}
+
+/* 設定標題樣式 */
+
+.logo {
+    font-size: 36px;
+    font-weight: bold;
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+}
+
+.item {
+    font-size: 36px;
+    font-weight: bold;
+    background-color: #000000;
+    color: #ffffff;
+    ma
+}
+
+/* 設定導覽列樣式 */
+nav {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+    display: inline-block;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+/* 設定主要內容樣式 */
+main {
+    width: 90%;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+section {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+section img {
+    max-width: 100%;
+}
+
+/* 設定表單樣式 */
+form {
+    width: 50%;
+    margin: 20px auto;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #ccc;
+}
+
+input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
+
+footer {
+    background-color: #525151;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+}
+
+p {
+    padding: 0;
+    font-size: 14px;
+}

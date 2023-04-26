@@ -1,0 +1,192 @@
+@import '__reset';
+
+.container {
+    max-width: 500px;
+    height: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.rotate {
+    transform: rotate(245deg);
+    display: inline-flex;
+    width: 100px;
+    height: 100px;
+    margin-top: 50px;
+    background-color: red;
+    color: rgb(255, 255, 255);
+}
+
+.sp {
+    display: flex;
+    margin-top: 50px;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    color: #080808;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(45deg);
+
+    >span {
+        transform: rotate(135deg);
+        font-size: 70px;
+        font-weight: 800;
+    }
+}
+
+.product {
+    margin-top: 50px;
+    display: block;
+    background: #dedede;
+    padding: 10px;
+    width: 300px;
+    height: 500px;
+
+
+    .product-img {
+        width: 100%;
+        height: 200px;
+        background: rgb(207, 179, 119);
+        color: #fff;
+        font-size: 30px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden; //隱藏顯示
+
+        >div:first-child {
+            //滑順放大
+            transition-duration: 1s;
+        }
+
+        &:hover {
+            >div:first-child {
+                transform: scale(2);
+            }
+
+        }
+
+        .product-discount {
+            position: absolute;
+            top: 36px;
+            right: -95px;
+            color: red;
+            background: rgb(255, 255, 255);
+            width: 100%;
+            text-align: center;
+            transform: rotate(45deg);
+            font-size: 18px;
+        }
+    }
+}
+
+.small-font {
+    margin: 50px;
+    font-size: 5px;
+    transform: scale(0.8);
+}
+
+.bg-change {
+    margin: 50px;
+    background: red;
+    color: yellow;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-property: background; //補禎屬性
+    transition-duration: 3s; //補禎時間
+    transition-delay: 1s; //延遲執行
+
+    &:hover {
+        background: yellow;
+        color: red;
+    }
+}
+
+.to-run {
+    margin: 50px 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    background: rgb(45, 131, 243);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 0;
+    position: relative;
+
+    // &.active {
+    //     animation-name: run-m;
+    //     animation-duration: 3s;
+    // }
+}
+
+#run-trigger {
+    //checkbox
+    display: none;
+
+    &:checked {
+        ~.to-run {
+            animation-name: run-m; //動畫名稱
+            animation-duration: 3s; //動畫時間
+            animation-iteration-count: infinite; //執行次數:輪播
+            animation-direction: alternate; //播放方向
+        }
+    }
+}
+
+.button {
+    padding: 10px 20px;
+    background: #3b3ef3;
+    color: #fff;
+    cursor: pointer;
+    transition-duration: 0.5s;
+
+    &:hover {
+        background: #e95035;
+    }
+}
+
+
+@keyframes run {
+
+    //多關鍵影格
+    from {
+        left: 0;
+        background: rgb(45, 131, 243);
+    }
+
+    to {
+        left: 100%;
+        background: red;
+    }
+}
+
+@keyframes run-m {
+
+    //3段關鍵影格
+    0% {
+        left: 0;
+        top: 0;
+        background: rgb(45, 131, 243);
+    }
+
+    50% {
+        left: 50%;
+        top: 100px;
+        background: yellow;
+    }
+
+    100% {
+        left: 100%;
+        top: 0;
+        background: red;
+    }
+}
