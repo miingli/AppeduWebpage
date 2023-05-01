@@ -1,0 +1,145 @@
+@import '_reset';
+
+body {
+    background-color: #4898da;
+}
+
+//建立第一個雲朵，下方長橢圓形
+.cloud {
+    width: 500px;
+    height: 150px;
+    background: #fff;
+    position: absolute;
+    top: 120px;
+    left: 50px;
+    border-radius: 300px;
+
+    animation-name: move; //動畫名稱
+    animation-duration: 5s; //動畫時間
+    animation-direction: alternate; //播放方向
+    animation-iteration-count: infinite; //執行次數，不停止
+    animation-timing-function: linear; //動畫速度曲線
+
+    //建立第一個雲朵，上方圓形
+    &::before {
+        //前方插入
+        content: '';
+        position: absolute;
+        width: 230px;
+        height: 200px;
+        border-radius: 300px;
+        background: #fff;
+        top: -100px;
+        left: 190px;
+        background: inherit;
+    }
+
+    //建立第一個雲朵，上方橢圓形
+    &::after {
+        //後方插入
+        content: '';
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        background: #fff;
+        top: -50px;
+        left: 100px;
+        background: inherit;
+    }
+
+
+    //第二個完整的雲朵
+    &.c2 {
+        top: 500px;
+        left: 100px;
+        transform: scale(0.8);
+        animation-duration: 4s; //動畫時間
+    }
+
+    //第三個完整的雲朵
+    &.c3 {
+        top: 800px;
+        left: 20px;
+        transform: scale(0.5);
+        animation-duration: 3s; //動畫時間
+    }
+
+    @keyframes move {
+        from {
+            margin-left: 0;
+            background: #fff;
+        }
+
+        to {
+            margin-left: 100%;
+            background: #000;
+        }
+    }
+}
+
+.hrefnote {
+    display: none;
+}
+
+
+
+
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+    height: 100%;
+}
+
+.title {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+    th {
+        background: #3669d8;
+        color: #fff;
+    }
+
+    th,
+    td {
+        border: 1px solid #000;
+        padding: 10px;
+    }
+
+    td:last-child {
+        text-align: right;
+    }
+}
+
+.func {
+    text-align: right;
+    margin-bottom: 20px;
+
+    button {
+        padding: 10px 20px;
+        border: 0;
+        background: #3669d8;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 800;
+        cursor: pointer;
+
+        &:hover {
+            background: #fda623;
+        }
+    }
+}
+
+@media print {
+    .func {
+        display: none;
+    }
+}
