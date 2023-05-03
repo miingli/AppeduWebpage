@@ -24,82 +24,40 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/icons/note/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="css/0501.css">
-    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/0503.css">
 
-    <title>0501 CSS動態運用</title>
+    <title>0503 CSS動態運用</title>
 
 </head>
 
 <body>
     <header>
-        <!-- <div class="hrefnote"> -->
-        <!-- 將這個區塊列印時隱藏 -->
+
         <h1>
-            <p style="margin-left:1cm;" class="animate__animated animate__heartBeat">0501 CSS動態運用</p>
-            <!-- 匯入動畫套件 -->
+            <p style="margin-left:1cm;">0503 CSS動態運用</p>
         </h1>
     </header>
-    <!-- </div> -->
 
     <main>
-        <!-- <div class="hrefnote"> -->
-        <!-- 將這個區塊列印時隱藏 -->
         <b>
             <h2>筆記:</h2>
         </b>
 
         <h3>
-            開發者模式:F12
+            <a href="/rwd layout1.html" target="_blank">RWD webpage layout1</a> <br><br>
+            1.檔名前方加「_」是為了不讓編譯器Live Sass Compile寫進css裡<br>
+            2.檔名若要寫大寫，那專案全部的檔名都要是大寫；小寫則是最安全的<br>
+            3.@import引入到scss,會使用是為了讓開發者好找到對應的資料
         </h3>
 
         <br><br><br>
-        <h4>藍天白雲cloud動畫</h4>
-        <!-- </div> -->
-        <div class="cloud"></div>
-        <div class="cloud c2"></div>
-        <div class="cloud c3"></div>
 
-        <br><br><br>
+        <h4>RWD:Media Query、max-width</h4>
+        <div class="colorful">Hello World RWD</div>
 
-        <div class="container">
-            <h4>Media Query</h4>
-            <h1 class="title">列印學生成績表</h1>
-            <div class="func">
-                <button onclick="doPrint()">列印</button>
-            </div>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>姓名</th>
-                        <th>成績</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>A</td>
-                        <td>100</td>
-                    </tr>
-                    <tr>
-                        <td>B</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td>C</td>
-                        <td>1</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
 
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </main>
 </body>
-
-<script>
-    function doPrint() {
-        window.print(); //呼叫視窗的列印
-    }
-</script>
 
 </html>

@@ -1,0 +1,8 @@
+@media screen and (max-width: 800px) {
+  .header .header-content .menu {
+    display: none;
+  }
+  .header .header-content .mobile-switch {
+    display: flex;
+  }
+}/*# sourceMappingURL=RWD layout1_mobile.css.map */

@@ -1,0 +1,77 @@
+//手機版介面:媒體類型跟特徵視窗螢幕最大寬度
+@media screen and (max-width: 800px) {
+    .header {
+        .header-content {
+            position: relative;
+
+            .menu {
+                // display: none;
+                position: absolute;
+                background: #ffffff;
+                top: -500px;
+                width: 100%;
+                left: 0;
+                opacity: 0; //透明度
+                border-bottom-left-radius: 8px;
+                border-bottom-right-radius: 8px;
+                padding-top: 30px;
+                padding-bottom: 30px;
+                transition: 0.3s;
+
+                ul {
+                    flex-direction: column;
+
+                    li {
+                        margin-right: 0;
+                        margin-bottom: 30px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+
+            .mobile-switch {
+                display: flex;
+            }
+
+            #mobile-switch-box {
+                &:checked {
+
+                    //~相鄰選擇器
+                    ~.menu {
+                        // display: block;
+                        top: 90px;
+                        opacity: 1;
+                        z-index: 2;
+                    }
+
+                    //~相鄰選擇器
+                    ~.mobile-switch {
+
+                        >span {
+                            background: rgb(126, 125, 125);
+
+                            &:first-child {
+                                position: relative;
+                                transform: rotate(45deg);
+                                top: 5px;
+                            }
+
+                            &:nth-child(2) {
+                                display: none;
+                            }
+
+                            &:last-child {
+                                position: relative;
+                                transform: rotate(-45deg);
+                                top: -5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
