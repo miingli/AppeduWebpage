@@ -321,7 +321,6 @@ html {
   .header .header-content #mobile-switch-box:checked ~ .menu {
     top: 90px;
     opacity: 1;
-    z-index: 2;
   }
   .header .header-content #mobile-switch-box:checked ~ .mobile-switch > span {
     background: rgb(126, 125, 125);
@@ -338,5 +337,52 @@ html {
     position: relative;
     transform: rotate(-45deg);
     top: -5px;
+  }
+  .join-form {
+    height: unset;
+    min-height: 100vh;
+  }
+  .join-form .join-form-wrap {
+    height: unset;
+    align-items: flex-start;
+    padding-top: 120px;
+  }
+  .join-form .join-form-wrap .join-form-content {
+    flex-direction: column;
+    background: transparent;
+    height: unset;
+    padding-bottom: 60px;
+  }
+  .join-form .join-form-wrap .join-form-content > div {
+    width: 100%;
+    height: 300px;
+    background: rgb(5, 47, 138);
+  }
+  .join-form .join-form-wrap .join-form-content .join-form-left-side::before {
+    right: unset;
+    top: unset;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: calc(100% - 60px);
+    margin-left: 30px;
+    border-left-width: 0;
+    border-bottom: 3px dashed #fff;
+  }
+  .flow .item {
+    justify-content: flex-start;
+    padding-left: 5px;
+    margin-bottom: 20px;
+  }
+  .flow .item::before {
+    left: 18px;
+  }
+  .flow .item .text {
+    left: 50px;
+  }
+  .flow .item:nth-child(even) .text {
+    left: 50px;
+    right: unset;
+    text-align: left;
   }
 }/*# sourceMappingURL=RWD layout1.css.map */
