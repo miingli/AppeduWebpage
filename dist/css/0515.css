@@ -1,0 +1,17 @@
+header {
+  background-image: url(/background/html.png);
+  background-repeat: no-repeat;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}/*# sourceMappingURL=0515.css.map */

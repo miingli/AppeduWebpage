@@ -24,8 +24,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/icons/note/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <link rel="stylesheet" href="css/0510.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/0515.css">
 
     <title>0515 JavaScript動態程式基礎</title>
 
@@ -43,7 +42,197 @@
         <b>
             <h2>筆記:</h2>
         </b>
+        <h3>JavaScript</h3><br>
 
+        <p>let num1 = 1;<br>
+            let num2 = 1.2;<br>
+            //整數+浮點數(小數點)<br>
+            let num3 = num1 + num2;<br>
+            let num4 = '10';<br>
+            let num5 = num1 + num4; //當數字遇到字串<br>
+            let num6 = num1 - num4;<br>
+            let num7 = num1 * num4;<br>
+            let num8 = num1 / num4;<br>
+            let num9 = num1 % num4;<br>
+            let num10 = num1 + 'a';<br>
+            //顯示型態typeof<br>
+            console.log(num1, num2, num3, typeof num4, num5, num6, num7, num8, num9, num10);<br>
+
+            <br><br><br>
+
+            let num11 = parseInt(num1, 10) + parseInt(num4, 10);<br>
+            //偷雞法前面加上 【+】 轉為數字<br>
+            let num12 = +num1 + +num4;<br>
+            let num13 = +num1 + +'a';<br>
+            console.log(num11, num12, num13);<br>
+
+            <br><br><br>
+
+            // 字元 char ,強型態語言時,一次只能塞一個<br>
+            let s1 = 'S1 \t S1';<br>
+            // 字串 string<br>
+            let s2 = "S2 \t S2";<br>
+            console.log(s1); //S1 S1<br>
+            console.log(s2); //S2 S2<br>
+            // escape \跳脫字元<br>
+            // \n -> 換行<br>
+            // \r\n -> win換行<br>
+            // \t -> tab<br>
+
+            <br>
+            console.log(num1, num1.toString(), typeof num1, typeof num1.toString());<br>
+
+            <br><br><br>
+
+            //布林值 boolean<br>
+            let b1 = true;<br>
+            let b2 = false;<br>
+            let b3 = 1;<br>
+            let b4 = 0;<br>
+            let b5 = 's';<br>
+            let b6 = '';<br>
+            let b7 = -1;<br>
+            let b8 = 2;<br>
+
+            <br>
+            if (b7) {<br>
+            console.log('Yes');<br>
+            } else {<br>
+            console.log('No'); //false、0、''因為都沒有東西<br>
+            }<br>
+
+            <br><br><br>
+
+            //陣列array<br>
+            let students = [1, 2, 3, 4]<br>
+
+            console.log(students); //1, 2, 3, 4<br>
+            console.log(students.join('::')); //增加、轉字串1::2::3::4::5<br>
+
+            students.push(5); //加一個數字5<br>
+            console.log(students); //1, 2, 3, 4, 5<br>
+
+            console.log(students[0]); //編號0是1<br>
+
+            let index = students.indexOf(2); //尋找數字2的編號在哪<br>
+            console.log(index); //編號1<br>
+
+            students.splice(index, 1); //刪掉編號1的數字2<br>
+            console.log(students); //1, 3, 4, 5<br>
+
+            <br><br><br>
+
+            //陣列array<br>
+            let nums = [40, 50, 80, 75];<br>
+
+            console.log('原始分數');<br>
+            nums.forEach((snum, index) => {<br>
+            console.log(`第 ${index + 1} 位學生: ${snum}`); //第一位學生(編號)、幾分<br>
+            nums[index] = snum + 20; //告訴每位學生(編號)的分數都加20<br>
+            })<br>
+
+            console.log('加分');<br>
+            nums.forEach((snum, index) => {<br>
+            console.log(`第 ${index + 1} 位學生: ${snum}`); //進行每位學生(編號)的分數都加20<br>
+            });<br>
+
+            <br><br><br>
+
+            //迴圈for<br>
+            let students100 = [];<br>
+            for (let sindex = 0; sindex < 100; sindex++) { students100[sindex]=Math.ceil(Math.random() * 100); }<br>
+                console.table(students100); //函數:宣告 const a1=function () { //第一種宣告 console.log('Origin function'); }<br>
+                const a2=()=> { //第二種宣告<br>
+                console.log('Arror function');<br>
+                }
+
+
+                nums.forEach(function (snum, index) {<br>
+                console.log(`第 ${index + 1} 位學生: ${snum}`);<br>
+                })<br>
+
+                const add20 = function (snum, index) {<br>
+                console.log(`具名函數--第 ${index + 1} 位學生: ${snum}`);<br>
+                }<br>
+                //呼叫<br>
+                nums.forEach(add20);<br>
+
+                <br><br><br>
+
+                //先宣告我想做這樣<br>
+                const addNum = (originNum, addNum) => {<br>
+
+                originNum = +originNum;<br>
+                addNum = +addNum;<br>
+                // let originNum = 40;<br>
+                // let addNum = 20;<br>
+
+                let total = originNum + addNum;<br>
+                // 判斷是否真的是數字<br>
+
+                console.log(`In function: ${total}`); // 判斷是否超過100分<br>
+                return total;<br>
+                }<br>
+
+                //函數與變數 //進行施作宣告的內容<br>
+                let student = [40, 50, 80, 75];<br>
+                let adds = 30;<br>
+                student.forEach((s, index) => {<br>
+                students[index] = addNum(s, adds);<br>
+                console.log(s);<br>
+                });<br>
+                console.table(students);<br>
+
+                <br><br><br>
+
+                //物件object<br>
+                let studentss = [];<br>
+                students.push({<br>
+                name: 'David',<br>
+                num: 40<br>
+                });<br>
+
+                students.push({<br>
+                name: 'John',<br>
+                num: 50<br>
+                });<br>
+
+                students.push({<br>
+                name: 'Helen',<br>
+                num: 80<br>
+                });<br>
+
+                students.push({<br>
+                name: 'Mary',<br>
+                num: 20<br>
+                });<br>
+
+                let add = 30;<br>
+                students.forEach((student, index) => {<br>
+                console.log(`Student ${student.name}: ${student.num}`);<br>
+                student.num = addNum(student.num, add);<br>
+                students[index] = student;<br>
+                })<br>
+                console.table(students);<br>
+
+                <br><br><br>
+
+                //執行後遞增n++、遞增後執行++n<br>
+                let n = 1;<br>
+                let n2 = n++;<br>
+                let n3 = ++n;<br>
+
+                console.log(n);<br>
+                console.log(n2);<br>
+                console.log(n3);<br>
+
+                <br><br><br>
+
+                //99乘法表<br>
+                for (let start = 1; start <= 9; start++) { // console.log(start); for (let end=1; end <=9; end++) {<br>
+                    console.log(`${start} * ${end}=${start * end}`) } }
+        </p>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </main>
 </body>
 <script src="javascript/bootstrap.min.js"></script>
