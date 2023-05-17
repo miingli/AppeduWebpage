@@ -26,7 +26,7 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="css/0517.css">
 
-    <title>0515 JavaScript動態程式基礎</title>
+    <title>0517 JavaScript動態程式基礎</title>
 
 </head>
 
@@ -34,15 +34,126 @@
     <header>
 
         <h1>
-            <p style="margin-left:1cm;">0515 JavaScript動態程式基礎</p>
+            <p style="margin-left:1cm;">0517 JavaScript動態程式基礎</p>
         </h1>
     </header>
 
     <main>
         <b>
             <h2>筆記:</h2>
-        </b>
+        </b><br>
 
+        <div class="container">
+
+            <h3>抓取DOM</h3><br>
+            <p>單一</p>
+            <div id="main">
+                I'm Main
+            </div><br>
+
+            <p>let main = document.querySelector('#main');<br>
+                console.log(main);<br>
+                // if.....<br>
+                let num1 = document.querySelector('#num-1');<br>
+                let showBtn = document.querySelector('#show-btn');<br></p> <br>
+
+            <p>多選</p>
+            <ul id="menu">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul><br>
+
+            <p>let lis = document.querySelectorAll('#menu li');<br>
+                console.log(lis);</p><br>
+
+            <h3>控制</h3><br>
+
+            <p>內容<br>
+                main.innerHTML = 'Superman!';</p><br>
+
+            <p>數值</p>
+            <input type="text" id="num-1">
+            <button id="show-btn">show number</button><br>
+
+            <p>事件監聽<br>
+                showBtn.addEventListener('click', () => {<br>
+                num1.value = 'ABC'; 數值<br>
+                });</p><br>
+
+            <br><br><br><br>
+
+            <h3>99乘法表</h3>
+            <div class="input-block">
+                <div>
+                    <label for="n1">第一個數字</label>
+                    <input type="number" id="n1">
+                </div>
+                <div>
+                    <button id="make">X(乘)</button>
+                </div>
+                <div>
+                    <label for="n2">第二個數字</label>
+                    <input type="number" id="n2">
+                </div>
+            </div>
+            <div>
+                <table class="table" id="table">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>1</th>
+                            <th>2</th>
+                            <th>3</th>
+                            <th>4</th>
+                            <th>5</th>
+                            <th>6</th>
+                            <th>7</th>
+                            <th>8</th>
+                            <th>9</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>9</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </main>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
