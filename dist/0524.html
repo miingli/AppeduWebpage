@@ -27,6 +27,19 @@
     <link rel="stylesheet" href="css/0524.css">
 
     <title>0524 JavaScript動態程式基礎</title>
+    <style>
+        .image-block {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+            margin: 20px auto;
+        }
+
+        .image-block img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 
 </head>
 
@@ -42,7 +55,47 @@
         <b>
             <h2>筆記:</h2>
         </b><br>
-        <h3></h3>
+        <div class="container">
+
+            <h3>控制</h3><br>
+
+            <p>dataset</p>
+            <div class="image-block">
+                <img src="cat.jpg" alt="" data-src="catt.jpg">
+            </div>
+            <div class="image-block">
+                <img src="banner.jpeg" alt="" data-src="icons/htmlcssja/apple-icon-180x180.png">
+            </div>
+            <div class="image-block">
+                <img src="logo.svg" alt="" data-src="process.jpeg">
+            </div>
+
+            <p>//控制<br>
+                //dataset<br>
+                const lazyLoad = () => {<br>
+                let images = document.querySelectorAll('.image-block img');<br>
+                images.forEach(img => {<br>
+                let src = img.dataset.src;<br>
+                if (src) {<br>
+                img.src = src;<br>
+                }<br>
+                });<br>
+                }<br>
+
+                setTimeout(() => {<br>
+                lazyLoad(); //懶加載:網頁跑完後，自己的東西再加入<br>
+                }, 5000)</p>
+
+            <p>互動初體驗-打招呼</p><br>
+            <div>
+                <input type="text" id="name" placeholder="請輸入姓名">
+            </div>
+            <div class="fn">
+                <button id="hi">打招呼</button>
+            </div>
+            <div id="response"></div>
+        </div>
+
 
     </main>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -50,5 +103,70 @@
 </body>
 <script src="javascript/bootstrap.min.js"></script>
 <script src="javascript/0524.js"></script>
+
+<script>
+    //判斷運算子
+    let n1 = 10;
+    let n2 = '10';
+
+    //等於  //一個【=】把右邊的值給左邊；兩個【=】比較外表；三個【=】比較內在型態
+    if (n1 === n2) {
+        console.log('ok');
+    } else {
+        console.log('no');
+    }
+
+    //不等於
+    if (n1 !== n2) {
+        console.log('ok');
+    } else {
+        console.log('no');
+    }
+
+    //生命週期
+
+    let num1 = 10;
+    //情境一
+    function run() {
+        let num2 = 20;
+        num1 = 30;
+        console.log(`in function num1:${num1}, num2:${num2}`)
+    }
+
+    run();
+    console.log(`out num1:${num1}`)
+    console.log(`out num2:${num2}`)
+
+    //情境二
+    function run(num1) {
+        let num2 = 20;
+        num1 = 30;
+        console.log(num1, num2);
+    }
+
+    run(num1);
+    console.log(num1);
+    console.log(num2);
+
+    //情境三
+    function run() {
+        num2 = 20;
+        num1 = 30;
+        console.log(num1, num2);
+    }
+
+    run();
+    console.log(num1);
+    console.log(num2);
+
+    //Call by reference
+    let student1 = {
+        name: 'david'
+    };
+
+    let student2 = student1;
+
+    student2.name = 'John';
+</script>
 
 </html>
