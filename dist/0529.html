@@ -27,6 +27,43 @@
     <link rel="stylesheet" href="css/0529.css">
 
     <title>0529 JavaScript動態程式基礎</title>
+    <style>
+        #menu li {
+            color: red;
+        }
+
+        *,
+        *::after,
+        *::before {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .about {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: #000000a2;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+
+        .about.active {
+            display: flex;
+        }
+
+        .one-page {
+            height: 100vh;
+            background: yellow;
+            color: red;
+        }
+    </style>
 
 </head>
 
@@ -42,7 +79,63 @@
         <b>
             <h2>筆記:</h2>
         </b><br>
-        <h3></h3>
+        <div class="container">
+
+            <h3>分數等級轉換-計算等級</h3><br>
+            <div>
+                <input type="number" id="number" class="form-control" placeholder="請輸入分數">
+            </div>
+            <div class="fn">
+                <button id="level" class="btn">計算等級</button>
+            </div>
+            <div id="response"></div>
+
+            <h3>事件氣泡</h3><br>
+            <ul id="menu">
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+            <button id="append">Append</button>
+        </div><br>
+
+        <h3>觸發流程</h3><br>
+
+        <p>中斷預設行為</p>
+        <a href="#about" id="link">About</a>
+
+
+        <div class="one-page">
+            One
+        </div>
+
+        <div class="one-page" id="about">
+            About
+        </div>
+
+        <div class="about">
+            <h1>About</h1>
+        </div><br>
+
+        <p>單次計時器(定時炸彈)</p>
+        <button id="say-hi-btn">Say Hi</button>
+        <div id="result"></div><br>
+
+        <h3>電子鐘</h3>
+
+        <ul class="clock">
+            <li id="c-1">H</li>
+            <li id="c-2">H</li>
+            <li>:</li>
+            <li id="c-3">M</li>
+            <li id="c-4">M</li>
+            <li>:</li>
+            <li id="c-5">S</li>
+            <li id="c-6">S</li>
+        </ul>
+        </div>
+
 
     </main>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -50,5 +143,66 @@
 </body>
 <script src="javascript/bootstrap.min.js"></script>
 <script src="javascript/0529.js"></script>
+
+<script>
+    // let items = document.querySelectorAll('#menu li');
+
+    // items.forEach(item => {
+    //     item.addEventListener('click', () => {
+    //         console.log(item.innerHTML);
+    //     });
+
+    //事件氣泡
+    let menu = document.querySelector('#menu');
+
+    menu.addEventListener('click', (e) => {
+        let target = e.target;
+        console.log(target.innerHTML);
+    });
+
+
+
+    let append = document.querySelector('#append');
+    append.addEventListener('click', () => {
+        let menu = document.querySelector('#menu');
+
+        let li = document.createElement('li');
+        li.innerHTML = '5';
+        menu.appendChild(li);
+
+        let li2 = document.createElement('li');
+        li2.innerHTML = '6';
+        menu.appendChild(li2);
+
+    });
+
+    //觸發流程
+    //中斷預設行為
+    let link = document.querySelector('#link');
+
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        let about = document.querySelector('.about');
+        about.classList.add('active');
+    });
+
+    //單次計時器(定時炸彈)
+    let sayHiBtn = document.querySelector('#say-hi-btn');
+    let timer = '';
+
+    sayHiBtn.addEventListener('click', () => {
+        // 取消單次計時器
+        clearTimeout(timer);
+        // 宣告單次計時器
+        timer = setTimeout(() => {
+            let result = document.querySelector('#result');
+            result.innerHTML = 'Hi';
+            console.log('Hi');
+        }, 2000)
+        console.log(timer);
+    })
+
+
+</script>
 
 </html>
