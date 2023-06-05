@@ -135,10 +135,14 @@ ul {
   display: none;
 }
 #run-trigger:checked ~ .to-run {
-  animation-name: run-m;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  -webkit-animation-name: run-m;
+          animation-name: run-m;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
 }
 
 .button {
@@ -152,6 +156,17 @@ ul {
   background: #e95035;
 }
 
+@-webkit-keyframes run {
+  from {
+    left: 0;
+    background: rgb(45, 131, 243);
+  }
+  to {
+    left: 100%;
+    background: red;
+  }
+}
+
 @keyframes run {
   from {
     left: 0;
@@ -159,6 +174,23 @@ ul {
   }
   to {
     left: 100%;
+    background: red;
+  }
+}
+@-webkit-keyframes run-m {
+  0% {
+    left: 0;
+    top: 0;
+    background: rgb(45, 131, 243);
+  }
+  50% {
+    left: 50%;
+    top: 100px;
+    background: yellow;
+  }
+  100% {
+    left: 100%;
+    top: 0;
     background: red;
   }
 }
