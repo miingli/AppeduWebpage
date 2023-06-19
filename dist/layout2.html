@@ -53,9 +53,11 @@
                     <img src="logo.png" alt="LOGO">
                 </a>
             </div>
-            <div>
-                <ul class="header-menu">
-                    <li>
+            <!-- <div>
+                <ul class="header-menu"> -->
+            <div class="header-menu">
+                <ul>
+                    <li class="active">
                         <a href="#">關於XT-GRIP</a>
                     </li>
                     <li>
@@ -80,7 +82,46 @@
         </div>
     </div>
 
-    <div class="page"></div>
+    <!-- <div class="page"></div> -->
+    <!-- <div class="slider-block"></div> -->
+    <!-- <div class="slider-block"> -->
+    <div class="slider-block" id="app-slider">
+        <div class="slider">
+            <!-- <ul> -->
+            <ul class="slider-item">
+                <!-- <li>
+                    <div class="slider-bg"></div> -->
+                <!-- <div class="slider-title">TITLE</div>
+                    <div class="silder-subtitle">SUB TITLE</div> -->
+                <!-- <div class="slider-content">
+                        <div class="slider-title">TITLE</div>
+                        <div class="silder-subtitle">SUB TITLE</div>
+                    </div>
+                </li> -->
+                <template v-for="(item, itemIndex) in items">
+                    <!-- <li> -->
+                    <li :class="{active: currentIndex == itemIndex}">
+                        <!-- <div class="slider-bg"></div> -->
+                        <div class="slider-bg" :style="{'background-image': `url(${item.bg})`}"></div>
+                        <div class="slider-content">
+                            <div class="slider-title">{{ item.title }}</div>
+                            <div class="silder-subtitle">{{ item.subtitle }}</div>
+                        </div>
+                    </li>
+                </template>
+            </ul>
+            <div class="slider-menu">
+                <!-- <div>1</div>
+                <div>2</div>
+                <div>3</div> -->
+                <template v-for="(item, itemIndex) in items">
+                    <!-- <div>{{ itemIndex }}</div> -->
+                    <div :class="{active: currentIndex == itemIndex}" @click="setIndex(itemIndex)">{{ itemIndex }}</div>
+                </template>
+                <!-- template樣版 -->
+            </div>
+        </div>
+    </div>
     <div class="footer">
         <div class="container">
             <div>
@@ -114,5 +155,7 @@
             <div class="footer-copyright">&copy; 2023 TIXTEEL FITNESSCO., LTD,All Rights Reserved.</div>
         </div>
 </body>
+<script src="javascript/vue3.js"></script>
+<script src="javascript/computer_layout2.js"></script>
 
 </html>

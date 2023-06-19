@@ -11,13 +11,25 @@
             display: flex;
         }
 
-        .container {}
+        // .container {}
 
-        .header-menu {
+        // .header-menu {
+        .header-menu ul {
+            position: fixed;
+            top: 80px;
+            left: 0;
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            // background: #dedede;
+            background: $header-bg;
             display: none;
         }
 
-        .header-icon {}
+        // .header-icon {}
 
         .header-lang {
             display: none;
@@ -25,25 +37,49 @@
     }
 
     #mobile-checkbox {
-        &:checked~.header-mobile-switch {
-            >span {
-                background: rgb(224, 48, 48);
+        // &:checked~.header-mobile-switch {
+        //     >span {
+        //         background: rgb(224, 48, 48);
 
-                &:first-child {
-                    transform: rotate(45deg);
-                    top: 9px;
-                }
+        //         &:first-child {
+        //             transform: rotate(45deg);
+        //             top: 9px;
+        //         }
 
-                &:nth-child(2) {
-                    transition: none;
-                    visibility: hidden;
-                }
+        //         &:nth-child(2) {
+        //             transition: none;
+        //             visibility: hidden;
+        &:checked {
+            ~.header-mobile-switch {
+                >span {
+                    background: rgb(61, 58, 58);
 
-                &:last-child {
-                    transform: rotate(-45deg);
-                    top: -9px;
+                    &:first-child {
+                        transform: rotate(45deg);
+                        top: 9px;
+                    }
+
+                    &:nth-child(2) {
+                        transition: none;
+                        visibility: hidden;
+                    }
+
+                    &:last-child {
+                        transform: rotate(-45deg);
+                        top: -9px;
+                    }
                 }
             }
+
+            ~.header-menu ul {
+                display: flex;
+            }
         }
+
+        // &:last-child {
+        //     transform: rotate(-45deg);
+        //     top: -9px;
+        // }
+
     }
 }
