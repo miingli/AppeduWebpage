@@ -50,7 +50,7 @@
             <div class="header-logo">
 
                 <a href="layout2.html">
-                    <img src="logo.png" alt="LOGO">
+                    <img src="layout2_mobile/logo.png" alt="LOGO">
                 </a>
             </div>
             <!-- <div>
@@ -122,11 +122,29 @@
             </div>
         </div>
     </div>
+    <!-- <div class="patent-design"> -->
+    <div class="patent-design" id="patent-design">
+        <div class="design-wrap" ref="wrap">
+            <div class="container">
+                <div class="design-content">
+                    <div class="design-title">專利結構設計</div>
+                    <div class="design-text">卡扣設計，讓您輕鬆替換重量，且安全不怕摔</div>
+                    <div>
+                        <!-- <button class="button">瞭解詳情</button> -->
+                        <button class="button" @click="doToggle">瞭解詳情</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="design-popup" ref="popup" @click="doToggle">
+            POPUP
+        </div>
+    </div>
     <div class="footer">
         <div class="container">
             <div>
                 <a href="layout2.html">
-                    <img src="logo_w.png" alt="">
+                    <img src="layout2_mobile/logo_W.png" alt="">
                 </a>
             </div>
             <div>
@@ -155,6 +173,7 @@
             <div class="footer-copyright">&copy; 2023 TIXTEEL FITNESSCO., LTD,All Rights Reserved.</div>
         </div>
 </body>
+<script src="javascript/gsap.min.js"></script>
 <script src="javascript/vue3.js"></script>
 <script src="javascript/computer_layout2.js"></script>
 

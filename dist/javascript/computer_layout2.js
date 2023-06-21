@@ -35,3 +35,42 @@ Vue.createApp({
         this.doLoop();
     }
 }).mount('#app-slider');
+
+
+Vue.createApp({
+    data() {
+        // return {}
+        return {
+            isOpen: false,
+            isRun: false,
+        }
+    },
+    methods: {
+        doToggle() {
+            // console.log(123);
+            if (this.isRun) {
+                return;
+            }
+
+            this.isRun = true;
+            this.isOpen = !this.isOpen;
+
+            let wrap = this.$refs.wrap;
+            let popup = this.$refs.popup;
+
+            if (this.isOpen) {
+                gsap.to(popup, { opacity: 1, display: 'block', duration: 1 });
+                gsap.to(wrap, { opacity: 0, display: 'none', duration: 0 });
+                // popup.style.display = 'block';
+                // wrap.style.display = 'none';
+            } else {
+                gsap.to(popup, { opacity: 0, display: 'none', duration: 0 });
+                gsap.to(wrap, { opacity: 1, display: 'block', duration: 1 });
+            }
+
+            setTimeout(() => {
+                this.isRun = false;
+            }, 1000)
+        }
+    }
+}).mount('#patent-design')
